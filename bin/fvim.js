@@ -22,7 +22,7 @@ var archy = require('archy');
 var _setupVimrc = function() {
 
     if (!which('git')) {
-        echo('Sorry, this script requires git');
+        echo('Sorry, this script requires git!');
         exit(1);
     }
 

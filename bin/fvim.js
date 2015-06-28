@@ -27,12 +27,12 @@ var _setupVimrc = function() {
     }
 
     // exec('git clone git@github.com:forsigner/fvim.git ~/fvim')
-    exec('git clone git@github.com:forsigner/fvim.git ' + userhome('fvim'), function(code, output) {
+    exec('git clone git@github.com:forsigner/fvim-vimrc.git ' + userhome('fvim'), function(code, output) {
 
         // symlink
-        ln('-sf', userhome('fvim', '.vimrc'), userhome('.vimrc'));
-        ln('-sf', userhome('fvim', '.vimrc.local'), userhome('.vimrc.local'));
-        ln('-sf', userhome('fvim', '.vimrc.local.bundles'), userhome('.vimrc.local.bundles'));
+        ln('-sf', userhome('fvim', 'vimrc'), userhome('.vimrc'));
+        // ln('-sf', userhome('fvim', '.vimrc.local'), userhome('.vimrc.local'));
+        // ln('-sf', userhome('fvim', '.vimrc.local.bundles'), userhome('.vimrc.local.bundles'));
 
         console.log('init success');
     });

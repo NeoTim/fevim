@@ -32,9 +32,6 @@
   "bin": {
     "fvim": "./bin/fvim.js"
   },
-  "scripts": {
-	 "test": "mocha"
-  },
   "devDependencies": {
     "commander": "^2.8.1",
     "request": "^2.57.0"

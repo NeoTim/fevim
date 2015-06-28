@@ -1,0 +1,45 @@
+{
+  "name": "fvim",
+  "version": "1.0.0",
+  "description": "vimrc manager base on nodejs",
+  "homepage": "http://vim.forsigner.com",
+  "main": "fvim.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forsigner/fvim.git"
+  },
+  "author": {
+    "name": "forsigner",
+    "email": "forsigner@gmail.com",
+    "url": "http://www.forsigner.com"
+  },
+  "keywords": [
+    "vim",
+    "fvim",
+    "neobundle",
+    "vimrc"
+  ],
+  "tag": [
+    "vim",
+    "fvim",
+    "neobundle",
+    "vimrc"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forsigner/fvim/issues"
+  },
+  "bin": {
+    "fvim": "./bin/fvim.js"
+  },
+  "devDependencies": {
+    "commander": "^2.8.1",
+    "request": "^2.57.0"
+  },
+  "dependencies": {
+    "archy": "^1.0.0",
+    "github-download": "^0.3.0",
+    "shelljs": "^0.5.1",
+    "userhome": "^1.0.0"
+  }
+}

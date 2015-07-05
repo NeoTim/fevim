@@ -17,7 +17,7 @@ var program = require('commander');
 var userhome = require('userhome');
 var ghdownload = require('github-download');
 var archy = require('archy');
-
+var vim = require('open-vim');
 
 var _setupVimrc = function() {
 
@@ -73,19 +73,29 @@ program
     .description('display installed plugin')
     .action(function(env, options) {
 
-        var s = archy({
-            label: 'Installed Plugin',
-            nodes: [{
-                label: 'tagbar.vim',
-            }, {
-                label: 'ctrp.vim',
-            }, {
-                label: 'emmet-vim',
-            }]
+        var bundlePath = userhome('.vim', 'bundle');
+
+        fs.readdir(bundlePath, function(err, data) {
+
+            var list = data.filter(function(item) {
+                return item.charAt(0) !== '.';
+            });
+
+            var bundleList = archy({
+                label: 'Installed Plugin',
+                nodes: list
+            });
+            console.log(bundleList);
         });
-        console.log(s);
     });
 
+
+program
+    .command('config')
+    .description('plugin config')
+    .action(function(env, options) {
+        vim.open('~/fvim/modules/vimrc.bundles.setting');
+    });
 
 
 program

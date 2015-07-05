@@ -39,6 +39,7 @@
   "dependencies": {
     "archy": "^1.0.0",
     "github-download": "^0.3.0",
+    "open-vim": "^1.0.0",
     "shelljs": "^0.5.1",
     "userhome": "^1.0.0"
   }

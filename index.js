@@ -5,7 +5,7 @@ var c = [];
 for(var i = 0; i < b.length; i++) {
     c.unshift(b[i]);
 }
-
+if
 var d = c.join('');
 
 console.log(b.reverse().join(''));

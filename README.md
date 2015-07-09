@@ -38,7 +38,7 @@ $ fvim init # setup vim config
 $ fvim bundles list  # display plugins installed
 
 $ fvim config [option]
-	opton
+	option
 	├─ basic
 	├─ gui
 	├─ autocmd

@@ -2,7 +2,7 @@
 
 /*
 
-fvim init vimrc
+*fvim init vimrc
 fvim install [package]
 fvim uninstall [package]
 fvim list
@@ -25,7 +25,6 @@ var _setupVimrc = function() {
         echo('Sorry, this script requires git!');
         exit(1);
     }
-
     // exec('git clone git@github.com:forsigner/fvim.git ~/fvim')
     exec('git clone git@github.com:forsigner/fvim-vimrc.git ' + userhome('fvim'), function(code, output) {
 
@@ -36,7 +35,6 @@ var _setupVimrc = function() {
 
         console.log('init success');
     });
-
 };
 
 program
@@ -45,7 +43,7 @@ program
 
 program
     .command('init vimrc')
-    .description('init vimrc')
+	.description('init vimrc')
     .option("-s, --setup_mode [mode]", "Which setup mode to use")
     .action(function(env, options) {
 

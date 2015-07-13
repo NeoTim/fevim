@@ -2,13 +2,12 @@
 
 /*
 
-*fvim init vimrc
-fvim install [package]
-fvim uninstall [package]
-fvim list
-fvim config plugin
-fvim config basic
-fvim config gui
+*fevim init vimrc
+fevim install [package]
+fevim uninstall [package]
+fevim list fevim config plugin
+fevim config basic
+fevim config gui
 
 */
 require('shelljs/global');
@@ -25,13 +24,15 @@ var _setupVimrc = function() {
         echo('Sorry, this script requires git!');
         exit(1);
     }
-    // exec('git clone git@github.com:forsigner/fvim.git ~/fvim')
-    exec('git clone git@github.com:forsigner/fvim-vimrc.git ' + userhome('fvim'), function(code, output) {
+
+    // exec('git clone git@github.com:forsigner/fevim.git ~/fevim')
+    exec('git clone git@github.com:forsigner/fevimrc.git ' + userhome('fevim'), function(code, output) {
 
         // symlink
-        ln('-sf', userhome('fvim', 'vimrc'), userhome('.vimrc'));
-        // ln('-sf', userhome('fvim', '.vimrc.local'), userhome('.vimrc.local'));
-        // ln('-sf', userhome('fvim', '.vimrc.local.bundles'), userhome('.vimrc.local.bundles'));
+        ln('-sf', userhome('fevim', 'vimrc'), userhome('.vimrc'));
+
+        // ln('-sf', userhome('fevim', '.vimrc.local'), userhome('.vimrc.local'));
+        // ln('-sf', userhome('fevim', '.vimrc.local.bundles'), userhome('.vimrc.local.bundles'));
 
         console.log('init success');
     });
@@ -39,32 +40,27 @@ var _setupVimrc = function() {
 
 program
     .version('v0.0.1')
-    .option('-v, --version', 'display version')
-
+    .option('-v, --version', 'display version');
 program
     .command('init vimrc')
-	.description('init vimrc')
-    .option("-s, --setup_mode [mode]", "Which setup mode to use")
+    .description('init vimrc')
+    .option('-s, --setup_mode [mode]', 'Which setup mode to use')
     .action(function(env, options) {
 
         var vimrcPath = userhome('.vimrc'); // .vimrc  文件
-        var fvimPath = userhome('fvim'); // .vimrc  文件
+        var fevimPath = userhome('fevim'); // .vimrc  文件
 
         if (fs.existsSync(vimrcPath)) {
             rm(vimrcPath);
         }
 
-        // check fvimPath
-        if (fs.existsSync(fvimPath)) {
-            rm('-rf', fvimPath);
+        // check fevimPath
+        if (fs.existsSync(fevimPath)) {
+            rm('-rf', fevimPath);
         }
 
         _setupVimrc();
-
-
     });
-
-
 
 program
     .command('ls')
@@ -87,22 +83,20 @@ program
         });
     });
 
-
 program
     .command('config')
     .description('plugin config')
     .action(function(env, options) {
-        vim.open('~/fvim/modules/vimrc.bundles.setting');
+        vim.open('~/fevim/modules/vimrc.bundles.setting');
     });
-
 
 program
     .command('exec <cmd>')
     .alias('ex')
     .description('execute the given remote cmd')
-    .option("-e, --exec_mode <mode>", "Which exec mode to use")
+    .option('-e, --exec_mode <mode>', 'Which exec mode to use')
     .action(function(cmd, options) {
-        console.log('exec "%s" using %s mode', cmd, options.exec_mode);
+        console.log('ee');
     }).on('--help', function() {
         console.log('  Examples:');
         console.log();

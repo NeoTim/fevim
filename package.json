@@ -33,10 +33,10 @@
     "fevim": "./bin/fevim.js"
   },
   "devDependencies": {
-    "commander": "^2.8.1",
-    "request": "^2.57.0"
   },
   "dependencies": {
+    "commander": "^2.8.1",
+    "request": "^2.57.0",
     "archy": "^1.0.0",
     "github-download": "^0.3.0",
     "open-vim": "^1.0.0",

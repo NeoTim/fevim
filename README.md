@@ -1,16 +1,16 @@
-# fvim
+# fevim
 Manage your vim configuration with Node.js
 
 ## Installation
 
 ``` bash
-$ npm install -g fvim
-$ fvim init
+$ npm install -g fevim
+$ fevim init
 ```
 
 ## Configuaration info 
 
-All your vim configuaration files place in <code>~/fvim</code>.
+All your vim configuaration files place in <code>~/fevim</code>.
 
 ``` bash
 ├── modules
@@ -33,11 +33,11 @@ All your vim configuaration files place in <code>~/fvim</code>.
 ## Commands
 
 ``` python
-$ fvim init # setup vim config
+$ fevim init # setup vim config
 
-$ fvim bundles list  # display plugins installed
+$ fevim bundles list  # display plugins installed
 
-$ fvim config [option]
+$ fevim config [option]
 	option
 	├─ basic
 	├─ gui
@@ -48,7 +48,7 @@ $ fvim config [option]
 	├─ local vimrc
 	├─ local bundles
 	└─ local bundles setting
-	usge`: $ fvim config gui # you can config gui in terminal
+	usge`: $ fevim config gui # you can config gui in terminal
 ```
 
 ## key mapping

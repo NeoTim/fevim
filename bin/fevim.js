@@ -18,6 +18,7 @@ var userhome = require('userhome');
 var ghdownload = require('github-download');
 var archy = require('archy');
 var vim = require('open-vim');
+var pkg = require('../package.json');
 
 var _setupVimrc = function() {
 
@@ -40,7 +41,7 @@ var _setupVimrc = function() {
 };
 
 program
-  .version('v0.0.1')
+  .version('v' + pkg.version)
   .option('-v, --version', 'display version');
 program
   .command('init vimrc')

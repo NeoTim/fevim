@@ -1,4 +1,4 @@
-# fevim
+# fevim [![Build Status](https://travis-ci.org/forsigner/fevim.svg?branch=master)](https://travis-ci.org/forsigner/fevim)
 Manage your vim configuration with Node.js
 
 ## Installation

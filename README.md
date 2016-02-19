@@ -33,7 +33,7 @@ All your vim configuaration files place in <code>~/fevim</code>.
 
 ## Commands
 
-``` python
+``` bash
 $ fevim init # setup vim config
 
 $ fevim bundles list  # display plugins installed

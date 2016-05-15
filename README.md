@@ -1,4 +1,4 @@
-# fevim [![Build Status](https://travis-ci.org/forsigner/fevim.svg?branch=master)](https://travis-ci.org/forsigner/fevim) [![NPM Version](http://img.shields.io/npm/v/fevim.svg?style=flat)](https://www.npmjs.org/package/fevim)
+# Fevim [![Build Status](https://travis-ci.org/forsigner/fevim.svg?branch=master)](https://travis-ci.org/forsigner/fevim) [![NPM Version](http://img.shields.io/npm/v/fevim.svg?style=flat)](https://www.npmjs.org/package/fevim)
 
 Manage your vim configuration with Node.js
 
